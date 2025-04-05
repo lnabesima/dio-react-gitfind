@@ -1,0 +1,14 @@
+.header {
+    width: 100dvw;
+    height: 3.25rem;
+    background-color: #2D333B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: 'Inter Tight', 'Roboto', sans-serif;
+}
