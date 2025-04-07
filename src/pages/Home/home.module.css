@@ -15,7 +15,6 @@
     margin-top: 0.625rem;
     padding-inline: 0.5rem;
     gap: 0.625rem;
-    border: 1px solid white;
 }
 
 .search{
@@ -29,5 +28,9 @@
 @media (width <= 620px) {
     .search {
         flex-direction: column;
+    }
+
+    .background{
+        display: none;
     }
 }

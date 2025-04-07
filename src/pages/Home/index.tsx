@@ -3,16 +3,13 @@ import { Header } from '../../components/Header';
 import styles from './home.module.css';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
-import { useState } from 'react';
 import { Profile } from '../../components/Profile';
 import { RepoList } from '../../components/RepoList';
 
 function App() {
-  const [counter, setCounter] = useState<number>(0);
 
   const handleClick = () => {
     console.log('click');
-    setCounter(counter + 1);
   };
 
   return (
@@ -25,7 +22,6 @@ function App() {
             <Input/>
             <Button onClick={handleClick}/>
           </div>
-          <p>The 'search' button was clicked {counter} times.</p>
           <Profile />
           <hr />
           <RepoList />

@@ -6,11 +6,17 @@ interface RepoListItemProps {
   repoUrl: string,
 }
 
-export const RepoListItem = ({repoName, repoDescription, repoUrl} : RepoListItemProps) => {
+export const RepoListItem = ({ repoName, repoDescription, repoUrl }: RepoListItemProps) => {
   return (
-    <li className={styles.item}>
-      <h4>{repoName}</h4> - <a href={repoUrl}>🔗</a>
-      <p>{repoDescription}</p>
-    </li>
-  )
-}
+    <>
+      <li className={styles.item}>
+        <div>
+          <h4 className={styles.repoName}>{repoName}</h4>{" "}
+          <a href={repoUrl} target={"_blank"} rel="noreferrer noopener" className={styles.repoUrl}>🔗</a>
+        </div>
+        <p className={styles.repoDescription}>{repoDescription}</p>
+      </li>
+      <hr/>
+    </>
+  );
+};

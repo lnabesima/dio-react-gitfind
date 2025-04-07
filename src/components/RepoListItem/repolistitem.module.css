@@ -1,3 +1,19 @@
 .item {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin-block: 1rem;
+}
+
+.repoName{
+    display: inline;
+    color: #539BF5;
+}
+.repoUrl{
+    text-decoration: none;
+}
+.repoDescription{
+    color: #999999;
+    font-size: 0.75rem;
 }
