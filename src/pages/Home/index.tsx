@@ -5,6 +5,7 @@ import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 import { useState } from 'react';
 import { Profile } from '../../components/Profile';
+import { RepoList } from '../../components/RepoList';
 
 function App() {
   const [counter, setCounter] = useState<number>(0);
@@ -27,6 +28,7 @@ function App() {
           <p>The 'search' button was clicked {counter} times.</p>
           <Profile />
           <hr />
+          <RepoList />
         </div>
       </main>
     </>
