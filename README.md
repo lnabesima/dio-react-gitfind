@@ -1,54 +1,69 @@
-# React + TypeScript + Vite
+# GitFind - GitHub Profile Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple front-end application built to fetch and display information about GitHub users using the GitHub API.
+This is an exercise from [DIO](https://www.dio.me/)'s React Formation course.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Search GitHub users by username.
+- Display essential user information:
+    - Profile picture
+    - Name & bio
+    - List of repositories
+- Clean, responsive, and lightweight design.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- React.js
+- GitHub REST API
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- Node.js (>=22.14.0)
+- npm (>=10.9.2) or pnpm (>=10.6.5)
+
+
+### Installation
+```bash
+git clone https://github.com/lnabesima/dio-react-gitfind.git
+cd dio-react-gitfind
+
+# using npm
+npm install
+npm start
+
+# OR using pnpm
+pnpm install
+pnpm start
+
 ```
+## Usage
+1. Open [http://localhost:5173](http://localhost:5173) in your browser.
+2. Type a GitHub username into the input field.
+3. Click "Search" to view detailed profile information.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 📸 Example
+![screenshot](https://i.imgur.com/ED4Ourj.png)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## ❗ Notes
+This app uses the public GitHub API without authentication, so it may be subject to [rate limits](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting).
+
+## 🙌 Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you'd like to change.
+
+## 👉 Next steps 
+- [ ] Add pagination of repositories list for better navigation.
+- [ ] Implement a loading indicator for improved UX during fetch operations.
+- [ ] Include usage instructions within the app interface to enhance usability.
+- [ ] Investigate GitHub API limitations concerning private repositories.
+
+
+## 📄 License
+MIT
