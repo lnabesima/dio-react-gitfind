@@ -1,19 +1,20 @@
 import styles from './repolist.module.css'
 import { RepoListItem } from '../RepoListItem';
+import { repo } from '../../@types/repo';
 
-export const RepoList = () => {
+interface RepoListProps {
+  repos: repo[];
+}
+
+export const RepoList = ({repos}:RepoListProps) => {
   return (
     <div>
       <h3 className={styles.title}>Repositórios</h3>
       <ul>
-        <RepoListItem repoName={'Teste'} repoUrl={'https://google.com.br'}
-                      repoDescription={'This is a test'}/>
-        <RepoListItem repoName={'Teste'} repoUrl={'https://google.com.br'}
-                      repoDescription={'This is a test'}/>
-        <RepoListItem repoName={'Teste'} repoUrl={'https://google.com.br'}
-                      repoDescription={'This is a test'}/>
-        <RepoListItem repoName={'Teste'} repoUrl={'https://google.com.br'}
-                      repoDescription={'This is a test'}/>
+        {repos.map((repo) => (
+          <RepoListItem key={repo.id} repoName={repo.full_name} repoUrl={repo.html_url}
+                        repoDescription={repo.description} isPrivate={repo.private}/>
+        ))}
       </ul>
     </div>
   );
